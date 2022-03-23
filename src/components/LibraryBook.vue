@@ -1,6 +1,6 @@
 <template>
   <div class="book bg-primary">
-    <h3 class="card-title">{{ item.title }}</h3>
+    <h4 class="card-title">{{ item.title }}</h4>
     <p class="card-text">Pages: {{ item.pages }}</p>
   </div>
 </template>

@@ -4,6 +4,8 @@ export default function LibraryBasketCollection() {
 
     basket.addBasketItem = function (basketItem) {
         this.push(basketItem);
+        console.log(basketItem)
+
     }
     basket.removeBasketItem = function (basketItem) {
         basket.splice(basket.indexOf(basketItem), 1);
@@ -16,6 +18,8 @@ export default function LibraryBasketCollection() {
             basketItem.checkOut();
         });
 
+        //
+        // basket = [];
         do {
             basket.pop();
         } while (basket.length > 0);
@@ -24,6 +28,6 @@ export default function LibraryBasketCollection() {
         return basket;
     }
 
-
+    console.log(basket);
     return basket;
 }

@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import BasketItem from "@/components/BasketItem";
+import BasketItem from "@/components/LibraryBasketItem";
 
 export default {
   name: "LibraryBasket",

@@ -1,14 +1,8 @@
 <template>
   <div class="album bg-primary">
-    <h3 class="card-title">{{ item.title }}</h3>
-    <div class="row">
-      <div class="col">
-        <p class="card-text">Artist: {{ item.artist }}</p>
-      </div>
-      <div class="col">
-        <p class="card-text">Number of tracks: {{ item.trackCount }}</p>
-      </div>
-    </div>
+    <h6 class="card-title">{{ item.title }}</h6>
+    <p class="card-text">Artist: {{ item.artist }}</p>
+    <p class="card-text">Number of tracks: {{ item.trackCount }}</p>
   </div>
 </template>
 
