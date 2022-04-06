@@ -68,21 +68,26 @@ export default {
         if (config.params.limit <= 10) {
           config.params.limit = 11;
         }
+
         axios.get(url, config)
             .then(response => {
               if (response.data.results.length > 0) {
                 this.queryResults = response.data.results;
                 console.log(this.queryResults)
+
               } else {
                 this.queryResults = [];
+
+                console.error('No results', this.queryResults);
+
               }
+
+              this.$emit('finished', this.queryResults);
+
             })
             .catch(error => {
               console.log('AJAX SEARCH ERROR', error);
 
-            })
-            .finally(() => {
-              this.$emit('finished', this.queryResults);
             })
       }
     }
