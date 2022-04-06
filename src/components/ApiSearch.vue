@@ -38,9 +38,9 @@ export default {
         // {value: 'movie', name: 'Movie'},
         // {value: 'music', name: 'Music'},
         {value: 'musicVideo', name: 'Music Video'},
-        // {value: 'podcast', name: 'Podcast'},
-        // {value: 'shortFilm', name: 'Short Film'},
-        // {value: 'software', name: 'Software'},
+        {value: 'podcast', name: 'Podcast'},
+        {value: 'shortFilm', name: 'Short Film'},
+        {value: 'software', name: 'Software'},
       ],
       limit: 25,
 

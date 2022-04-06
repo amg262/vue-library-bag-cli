@@ -17,10 +17,13 @@
 import LibraryBook from "@/components/LibraryBook";
 import LibraryMovie from "@/components/LibraryMovie";
 import LibraryAlbum from "@/components/LibraryAlbum";
+import LibrarySong from "@/components/LibrarySong";
+import LibraryMusicVideo from "@/components/LibraryMusicVideo";
+import LibraryTvShow from "@/components/LibraryTvShow";
 
 export default {
   name: "LibraryItem",
-  components: {LibraryBook, LibraryMovie, LibraryAlbum},
+  components: {LibraryBook, LibraryMovie, LibraryAlbum, LibrarySong, LibraryMusicVideo, LibraryTvShow},
   props: {
     item: Object,
     addRepair: Function,
