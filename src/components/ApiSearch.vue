@@ -27,19 +27,20 @@ export default {
       select: 'all',
       opts: [
         {value: 'all', name: 'All'},
+        {value: 'album', name: 'Album'},
         {value: 'tvShow', name: 'TV Show'},
         {value: 'music', name: 'Music'},
         {value: 'movie', name: 'Movie'},
         {value: 'podcast', name: 'Podcast'},
 
         {value: 'audiobook', name: 'Audiobook'},
-        {value: 'ebook', name: 'E-book'},
+        // {value: 'ebook', name: 'E-book'},
         // {value: 'movie', name: 'Movie'},
         // {value: 'music', name: 'Music'},
         {value: 'musicVideo', name: 'Music Video'},
         // {value: 'podcast', name: 'Podcast'},
-        {value: 'shortFilm', name: 'Short Film'},
-        {value: 'software', name: 'Software'},
+        // {value: 'shortFilm', name: 'Short Film'},
+        // {value: 'software', name: 'Software'},
       ],
       limit: 25,
 
@@ -81,9 +82,7 @@ export default {
 
             })
             .finally(() => {
-              this.$emit('search-finished', this.queryResults);
-              this.searching = false;
-              this.searchTerm = '';
+              this.$emit('finished', this.queryResults);
             })
       }
     }

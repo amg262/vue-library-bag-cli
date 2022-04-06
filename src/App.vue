@@ -50,19 +50,21 @@ export default {
       for(const i in res){
 
         switch (res[i].kind) {
-          case 'software': this.library.addItem(new Software(res[i].trackName, res[i].primaryGenreName, res[i].artworkUrl100));
+          case 'software': this.library.addItem(new Software(res[i].trackName, res[i].primaryGenreName, res[i].artworkUrl60));
           break;
-          case 'music-video': this.library.addItem(new MusicVideo(res[i].trackName, res[i].artistName, res[i].artworkUrl100));
+          case 'music-video': this.library.addItem(new MusicVideo(res[i].trackName, res[i].artistName, res[i].artworkUrl60));
+            console.log('here', res[i].artworkUrl60)
             break;
-          case 'podcast': this.library.addItem(new Podcast(res[i].collectionName, res[i].artistName, res[i].artworkUrl100));
+          case 'podcast': this.library.addItem(new Podcast(res[i].collectionName, res[i].artistName, res[i].artworkUrl60));
+
             break;
-          case 'tv-episode': this.library.addItem(new TvShow(res[i].trackName, res[i].collectionName, res[i].artworkUrl100));
+          case 'tv-episode': this.library.addItem(new TvShow(res[i].trackName, res[i].collectionName, res[i].artworkUrl60));
             break;
-          case 'feature-movie': this.library.addItem(new Movie(res[i].trackName, res[i].artistName, res[i].artworkUrl100));
+          case 'feature-movie': this.library.addItem(new Movie(res[i].trackName, res[i].artistName, res[i].artworkUrl60));
             break;
-          case 'audiobook': this.library.addItem(new Book(res[i].collectionName, res[i].artistName, res[i].artworkUrl100));
+          case 'audiobook': this.library.addItem(new Book(res[i].collectionName, res[i].artistName, res[i].artworkUrl60));
             break;
-          case 'song': this.library.addItem(new Song(res[i].trackName, res[i].artistName, res[i].collectionName, res[i].artworkUrl100));
+          case 'song': this.library.addItem(new Song(res[i].trackName, res[i].artistName, res[i].collectionName, res[i].artworkUrl60));
             break;
           default:
             break;

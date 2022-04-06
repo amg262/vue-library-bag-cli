@@ -83,14 +83,14 @@ class MusicVideo {
     artist = '';
     title = '';
 
-    img = '';
+    img;
 
     constructor(title, artist, image) {
         if(title) {
             this.title = title;
         }
         this.artist = artist || '--';
-        this.img = image || '--';
+        this.img = image || '';
     }
 }
 
