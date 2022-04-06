@@ -1,22 +1,26 @@
-export default function LibraryBasketCollection() {
+import Collection from "@/models/Collection";
 
-    const basket = Array();
+export default function LibraryBasketCollection() {
+    const basket = new Collection(Basket)
 
     basket.addBasketItem = function (basketItem) {
         this.push(basketItem);
-        console.log(basketItem)
-
     }
     basket.removeBasketItem = function (basketItem) {
         basket.splice(basket.indexOf(basketItem), 1);
-        console.log(basketItem)
+
     }
 
     basket.checkoutBasket = function () {
 
+        // this.forEach(function (basketItem) {
+        //     basketItem.pop();
+        // });
+
         this.forEach(function (basketItem) {
             basketItem.checkOut();
         });
+
 
         //
         // basket = [];
@@ -30,4 +34,8 @@ export default function LibraryBasketCollection() {
 
     console.log(basket);
     return basket;
+}
+
+function Basket() {
+
 }
