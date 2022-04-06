@@ -2,7 +2,7 @@
   <div id="app" class="container-fluid">
 
     <div class="row m-5">
-      <api-search @search-finished="display"></api-search>
+      <api-search @finished="display"></api-search>
     </div>
     <div class="row">
       <universal-library @add-to-basket="add" :library="library"></universal-library>
@@ -51,22 +51,34 @@ export default {
 
         switch (res[i].kind) {
           case 'software': this.library.addItem(new Software(res[i].trackName, res[i].primaryGenreName, res[i].artworkUrl60));
-          break;
+            console.log('soft', res[i].artworkUrl60)
+
+            break;
           case 'music-video': this.library.addItem(new MusicVideo(res[i].trackName, res[i].artistName, res[i].artworkUrl60));
-            console.log('here', res[i].artworkUrl60)
+            console.log('mv', res[i].artworkUrl60)
             break;
           case 'podcast': this.library.addItem(new Podcast(res[i].collectionName, res[i].artistName, res[i].artworkUrl60));
+            console.log('pod', res[i].artworkUrl60)
 
             break;
           case 'tv-episode': this.library.addItem(new TvShow(res[i].trackName, res[i].collectionName, res[i].artworkUrl60));
+            console.log('tv', res[i].artworkUrl60)
+
             break;
           case 'feature-movie': this.library.addItem(new Movie(res[i].trackName, res[i].artistName, res[i].artworkUrl60));
+            console.log('fm', res[i].artworkUrl60)
+
             break;
           case 'audiobook': this.library.addItem(new Book(res[i].collectionName, res[i].artistName, res[i].artworkUrl60));
+            console.log('mv', res[i].artworkUrl60)
+
             break;
           case 'song': this.library.addItem(new Song(res[i].trackName, res[i].artistName, res[i].collectionName, res[i].artworkUrl60));
+            console.log('song', res[i].artworkUrl60)
+
             break;
           default:
+
             break;
           // case 'software': this.library.add(new Software(res[i].trackName, res[i].primaryGenreName, res[i].artworkUrl100));
           //   break;
